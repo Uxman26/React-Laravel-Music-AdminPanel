@@ -1,0 +1,100 @@
+@import '../../common/resources/client/common.css';
+@import "web-player/playable-item/content-grid.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.player-overlay-bg {
+  background-image: linear-gradient(theme('colors.background'), theme('colors.background-alt') 85%);
+}
+
+.content-carousel {
+  grid-auto-columns: calc(
+    (100% - (var(--nVisibleItems) - 1) * 24px) / var(--nVisibleItems)
+  );
+}
+
+/* @media (min-width: 1200px) {
+  .web-player-container {
+    max-width: 954px;
+  }
+}
+@media (min-width: 1310px) {
+  .web-player-container {
+    max-width: 1086px;
+  }
+}
+@media (min-width: 1430px) {
+  .web-player-container {
+    max-width: 1206px;
+  }
+}
+@media (min-width: 1728px) {
+  .web-player-container {
+    max-width: 1504px;
+  }
+} */
+
+.landing-container {
+  @apply px-24 mx-auto relative;
+}
+
+@media screen and (min-width: 768px) {
+  .landing-container {
+    max-width: 750px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .landing-container {
+    max-width: 970px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .landing-container {
+    max-width: 1170px;
+  }
+}
+.arrow {
+  border: solid grey;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  transition: transform 0.3s;
+  padding: 4px;
+}
+.arrow.open {
+  transform: rotate(222.5deg);
+}
+.myarrow {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.button-fixed-width {
+  width: 220px; /* Adjust the width as needed */
+}
+.schedule-icon {
+  width: 16px;
+  height: 16px;
+}
+.album-icon {
+  width: 16px;
+  height: 16px;
+}
+/* Ensure the table layout is consistent */
+.table {
+  table-layout: fixed;
+  width: 100%;
+}
+/* Style for sticky headers */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: white; /* Adjust as needed */
+}
+/* Add styling for the headers */
+.table-header, .table-cell {
+  padding: 8px; /* Adjust padding as needed */
+}
