@@ -1,0 +1,63 @@
+.pricing-slider {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slick-slider {
+  margin: 0;
+}
+
+.slick-slide {
+  padding: 0 10px;
+}
+
+.slick-dots {
+  list-style: none;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  width: 100%;
+}
+
+.slick-dots li {
+  margin: 0;
+  height: 0;
+}
+
+.slick-dots li button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #5a5a5a;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.3s;
+}
+
+.slick-dots li.slick-active button {
+  background: #fff;
+}
+
+.plan-list .plan {
+  width: 240px;
+}
+
+.plan-list .plan img {
+  max-width: 100%;
+  height: auto;
+}
+
+.slick-dots li.slick-active button::before {
+  opacity: 0;
+}
+
+@media screen and (max-width: 992px) {
+  .blk_ruby {
+    block: block ruby;
+  }
+}
